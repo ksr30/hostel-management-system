@@ -1,0 +1,20 @@
+sdk-version: 0.13.55
+name: TestDaml
+source: daml
+init-script: Main:initialize
+parties:
+  - Alice 
+version: 0.0.1
+dependencies:
+  - daml-prim
+  - daml-stdlib
+  - daml-script
+
+codegen:
+  scala:
+    package-prefix: com.digitalasset.quickstart.iou.model
+    output-directory: scala-codegen/src/main/scala
+    verbosity: 2
+# </doc-ref:codegen-scala>
+sandbox-options:
+  - --wall-clock-time
